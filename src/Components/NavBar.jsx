@@ -1,11 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import { Link } from "react-router-dom"
 // import { Menu, X } from "lucide-react"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  
   return (
     <div>
       <nav className="bg-orange-500 text-white px-4 py-3">
@@ -18,15 +20,15 @@ const NavBar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="hover:underline transition-all">
+            <Link to="/" className="hover:underline transition-all">
               Home
-            </a>
-            <a href="#" className="hover:underline transition-all">
+            </Link>
+            <Link to="/About" className="hover:underline transition-all">
               About
-            </a>
-            <a href="#" className="hover:underline transition-all">
+            </Link>
+            <Link to="/contact-us" className="hover:underline transition-all">
               Contact US
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Right Section */}
