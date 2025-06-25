@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <div className="relative w-full min-h-screen flex items-center">
       <img
-        src="./public/Images/Hero_Section.jpg?height=800&width=1200"
+        src="./public/Images/Hero_Section.jpg"
         alt="Hero Section Background"
         className="absolute inset-0 w-full h-full object-cover"
       />

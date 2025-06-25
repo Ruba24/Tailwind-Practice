@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+// import { Menu, X } from "lucide-react"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,7 +12,7 @@ const NavBar = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/placeholder.svg?height=32&width=32" alt="Logo" className="w-8 h-8" />
+            <img src="./Images/Logo.png" alt="Logo" className="w-8 h-8" />
             <span className="font-semibold text-lg hidden sm:block">Baby Brains</span>
           </div>
 
@@ -38,9 +38,9 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {/* <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu */}
