@@ -20,15 +20,16 @@ const NavBar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:underline transition-all">
+            <Link to={"/"}  className="hover:underline transition-all">
               Home
             </Link>
-            <Link to="/About" className="hover:underline transition-all">
+            <Link to={"/About"}  className="hover:underline transition-all">
               About
             </Link>
-            <Link to="/contact-us" className="hover:underline transition-all">
+            <Link to={"/contact-us"}  className="hover:underline transition-all">
               Contact US
             </Link>
+            
           </div>
 
           {/* Desktop Right Section */}
@@ -50,20 +51,21 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-orange-400">
             <div className="flex flex-col space-y-4 mt-4">
-              <a href="#" className="hover:underline transition-all">
-                Home
-              </a>
-              <a href="#" className="hover:underline transition-all">
-                About
-              </a>
-              <a href="#" className="hover:underline transition-all">
-                Contact US
-              </a>
+               <Link to={"/"}  className="hover:underline transition-all">
+              Home
+            </Link>
+              <Link to={"/About"}  className="hover:underline transition-all">
+              About
+            </Link>
+              <Link to={"/contact-us"}  className="hover:underline transition-all">
+              Contact US
+            </Link>
               <div className="flex items-center justify-between pt-4 border-t border-orange-400">
                 <span className="text-sm font-medium">EN</span>
-                <button className="bg-white text-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
+                <Link to = "/login"> <button className="bg-white text-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
                   My Shipment
-                </button>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

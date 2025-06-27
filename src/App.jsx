@@ -8,6 +8,7 @@ import About from './Pages/About'
 import Home from './Pages/Home'
 import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
+import RegistrationPage from './Pages/RegistrationPage'
 function App() {
     const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ function App() {
     {
         path: "/contact-us",
         element: <> <ContactUs /> </>  
+    },
+    {
+        path: "/signup",
+        element: <> <RegistrationPage /> </>
     }
   ])
 
