@@ -10,31 +10,56 @@ import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
 import RegistrationPage from './Pages/RegistrationPage'
 function App() {
-    const router = createBrowserRouter([
+  const router = createBrowserRouter([
     {
-        path: "/login",
-    element: <><NavBar /> <Login /> </>    
-    }, 
-    {
-        path: "/",
-        element: <><NavBar /> <Home /> </>  
+      path: "/",
+      element: (
+        <>
+          <NavBar />
+          <HeroSection />
+          <Cards />
+        </>
+      ),
     },
     {
-        path: "/About",
-        element: <><NavBar /> <About /> </>  
+      path: "/about",
+      element: (
+        <>
+          <NavBar />
+          <About />
+        </>
+      ),
     },
     {
-        path: "/contact-us",
-        element: <> <ContactUs /> </>  
+      path: "/contact-us",
+      element: (
+        <>
+          <NavBar />
+          <ContactUs />
+        </>
+      ),
     },
     {
-        path: "/signup",
-        element: <> <RegistrationPage /> </>
-    }
-  ])
+      path: "/login",
+      element: (
+        <>
+          <NavBar />
+          <Login />
+        </>
+      ),
+    },
+    {
+      path: "/signup",
+      element: (
+        <>
+          <NavBar />
+          <RegistrationPage />
+        </>
+      ),
+    },
+  ]);
 
-return ( <> <HeroSection /> <Cards />
-    <RouterProvider router={router} />
-    </> ) }
+  return <RouterProvider router={router} />;
+}
 
 export default App
