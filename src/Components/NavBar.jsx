@@ -34,9 +34,10 @@ const NavBar = () => {
           {/* Desktop Right Section */}
           <div className="hidden md:flex items-center space-x-4">
             <span className="text-sm font-medium">EN</span>
-            <button className="bg-white text-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
+            <Link to = "/login"> <button className="bg-white text-orange-500 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
               My Shipment
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

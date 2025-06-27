@@ -4,11 +4,10 @@ import NavBar from './Components/NavBar'
 import HeroSection from './Components/HeroSection' 
 import Cards from './Components/cards'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Login from './Components/Login'
-import Home from './Components/Home'
-import About from './Components/About'
-import ContactUs from './Components/ContactUs'
-
+import About from './Pages/About'
+import Home from './Pages/Home'
+import ContactUs from './Pages/ContactUs'
+import Login from './Pages/Login'
 function App() {
     const router = createBrowserRouter([
     {
