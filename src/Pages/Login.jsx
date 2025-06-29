@@ -1,15 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log("Login attempt:", { email, password });
-  };
+  const handleLogin = async (e) => {
+  e.preventDefault();
+
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    console.log("Logged in user:", user);
+    alert("Login successful!");
+
+    // Optional: Store user data
+    localStorage.setItem("user", JSON.stringify(user));
+
+    // Redirect to home or dashboard
+    // navigate("/") (if using useNavigate from react-router-dom)
+
+  } catch (error) {
+    alert("Login failed: " + error.message);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
