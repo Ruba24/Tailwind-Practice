@@ -9,6 +9,8 @@ import Home from './Pages/Home'
 import ContactUs from './Pages/ContactUs'
 import Login from './Pages/Login'
 import RegistrationPage from './Pages/RegistrationPage'
+import MyShipment from './Pages/MyShipment';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -57,6 +59,16 @@ function App() {
         </>
       ),
     },
+    {
+         path: "/my-shipments",
+          element: (
+            <>
+              <NavBar />
+              <MyShipment />
+            </>
+  )
+}
+
   ]);
 
   return <RouterProvider router={router} />;
